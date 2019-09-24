@@ -20,16 +20,26 @@
                         <h1 class="text-dark bg-yellow">Are you looking for a Date?</h1>
                     </div>
                     <div class="main text-white mt-5">
+                        <div class="second d-none">
+                            <p class="text-uppercase text-white font-weight-bold">
+                                Then you must know
+                            </p>
+                            <p>
+                                1) If you see seomeone you know, do not publicate it or spread rumors.
+                                <br>
+                                2) It is your responsibility to practice safe relation.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="allowed text-white mt-5">
                         <p class="text-uppercase text-white font-weight-bold">
-                            Then you must know
-                        </p>
-                        <p>
-                            1) If you see seomeone you know, do not publicate it or spread rumors.
-                            <br>
-                            2) It is your responsibility to practice safe relation.
+                            Are you 18+ Older?
                         </p>
                     </div>
-                    <div class="main bg-warning py-4 mb-5 rounded-sm" id="signup" style="cursor:pointer">
+                    <div class="allowed bg-warning py-4 mb-5 rounded-sm" id="allowed" style="cursor:pointer">
+                        <h1 class="text-dark">Yes >></h1>
+                    </div>
+                    <div class="main bg-warning py-4 mb-5 rounded-sm d-none" id="signup" style="cursor:pointer">
                         <h1 class="text-dark">Finish Sign Up >></h1>
                     </div>
                     <div class="form row d-none mb-5 mx-4">
@@ -75,6 +85,12 @@
 
         <script>
             $(document).ready(function() {
+                $('#allowed').click(function() {
+                    $('.allowed').hide();
+                    $('.main').show();
+                    $('.second').removeClass('d-none');
+                    $('#signup').removeClass('d-none');
+                })
                 $('#signup').click(function() {
                     $('.main').hide();
                     $('.form').removeClass('d-none');
